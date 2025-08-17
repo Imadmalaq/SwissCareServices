@@ -8,9 +8,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/4ab9c738-49c7-4160-9191-4c0f0a6a9704.png" 
+              src="/lovable-uploads/8c669d56-d197-43e9-baf2-f83938eee062.png" 
               alt="HelvetiClean - Propreté en toute confiance" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
           
