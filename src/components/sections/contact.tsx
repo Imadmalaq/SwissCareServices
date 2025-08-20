@@ -18,10 +18,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-2 lg:order-1">
             <Card className="shadow-clean border-0 bg-card">
               <CardHeader className="pb-8 pt-10">
                 <CardTitle className="text-2xl font-bold">Demande de devis</CardTitle>
@@ -114,7 +114,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 order-1 lg:order-2">
             <Card className="shadow-subtle border-0 bg-card">
               <CardContent className="p-8">
                 <h3 className="font-bold text-lg mb-6">Contact direct</h3>

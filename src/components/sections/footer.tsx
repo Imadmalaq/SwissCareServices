@@ -4,15 +4,15 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 const Footer = () => {
   return (
     <footer className="bg-card border-t">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           
           {/* Logo & Description */}
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             <img 
               src="/lovable-uploads/8c669d56-d197-43e9-baf2-f83938eee062.png" 
               alt="HelvetiClean" 
-              className="h-16 w-auto mb-4"
+              className="h-12 sm:h-16 w-auto mb-4"
             />
             <p className="text-muted-foreground mb-4 max-w-md">
               Service de nettoyage professionnel et écologique en Suisse Romande. 
@@ -55,17 +55,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="border-t pt-6 sm:pt-8 mt-6 sm:mt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
             <p>&copy; 2024 HelvetiClean. Tous droits réservés.</p>
-            <div className="space-y-2">
+            <div className="space-y-2 w-full sm:w-auto">
               <Collapsible>
                 <CollapsibleTrigger className="flex items-center gap-2 hover:text-primary transition-professional">
                   <span>Mentions légales</span>
                   <ChevronDown className="h-4 w-4" />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 text-xs text-muted-foreground">
-                  <div className="bg-muted/50 p-4 rounded-lg max-w-md">
+                  <div className="bg-muted/50 p-3 sm:p-4 rounded-lg max-w-sm sm:max-w-md">
                     <p className="mb-2"><strong>HelvetiClean</strong></p>
                     <p>Service de nettoyage professionnel</p>
                     <p>Suisse Romande</p>
@@ -81,7 +81,7 @@ const Footer = () => {
                   <ChevronDown className="h-4 w-4" />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 text-xs text-muted-foreground">
-                  <div className="bg-muted/50 p-4 rounded-lg max-w-md">
+                  <div className="bg-muted/50 p-3 sm:p-4 rounded-lg max-w-sm sm:max-w-md">
                     <p className="mb-2"><strong>Protection des données</strong></p>
                     <p>Nous respectons votre vie privée et protégeons vos données personnelles conformément à la législation suisse en vigueur.</p>
                     <p className="mt-2">Les informations collectées via notre formulaire de contact sont utilisées uniquement pour répondre à vos demandes de devis.</p>
@@ -95,7 +95,7 @@ const Footer = () => {
                   <ChevronDown className="h-4 w-4" />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 text-xs text-muted-foreground">
-                  <div className="bg-muted/50 p-4 rounded-lg max-w-md">
+                  <div className="bg-muted/50 p-3 sm:p-4 rounded-lg max-w-sm sm:max-w-md">
                     <p className="mb-2"><strong>Conditions Générales de Vente</strong></p>
                     <p>Nos services sont fournis selon les conditions générales en vigueur.</p>
                     <p className="mt-2">Devis gratuit valable 30 jours. Paiement selon les termes convenus dans le contrat de service.</p>

@@ -63,17 +63,17 @@ const About = () => {
           </div>
 
           {/* Right Column - Values Grid */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
                 <Card key={index} className="hover-lift shadow-subtle border-0 bg-card">
-                  <CardContent className="p-8 text-center space-y-4">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/5 rounded-2xl">
-                      <Icon className="h-6 w-6 text-primary" />
+                  <CardContent className="p-6 sm:p-8 text-center space-y-3 sm:space-y-4">
+                    <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 bg-primary/5 rounded-2xl">
+                      <Icon className="h-5 sm:h-6 w-5 sm:w-6 text-primary" />
                     </div>
-                    <h3 className="font-bold text-lg">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h3 className="font-bold text-base sm:text-lg">{value.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                       {value.description}
                     </p>
                   </CardContent>

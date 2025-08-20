@@ -15,27 +15,27 @@ const Hero = () => {
               <span className="text-sm font-medium text-muted-foreground">Service écologique Swiss Made</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
               <span className="text-primary">Propreté</span> en toute{" "}
               <span className="text-secondary">confiance</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
               Service de nettoyage récurrent et écologique pour bureaux, retail de luxe et copropriétés en Suisse Romande.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-lg px-8 py-6 font-medium"
+                className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 font-medium"
               >
-                <Clock className="mr-3 h-5 w-5" />
+                <Clock className="mr-2 sm:mr-3 h-4 sm:h-5 w-4 sm:w-5" />
                 Obtenez un devis en 24H
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-secondary/20 text-secondary hover:bg-secondary/5 hover:border-secondary/40 text-lg px-8 py-6 transition-gentle font-medium"
+                className="border-2 border-secondary/20 text-secondary hover:bg-secondary/5 hover:border-secondary/40 text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 transition-gentle font-medium"
               >
                 Nos services
               </Button>

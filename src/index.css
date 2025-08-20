@@ -176,10 +176,19 @@
 
   /* Clean spacing utilities */
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
   }
 
   .content-padding {
     @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-card-padding {
+    @apply p-4 sm:p-6 md:p-8;
+  }
+
+  .mobile-text-responsive {
+    @apply text-sm sm:text-base;
   }
 }
