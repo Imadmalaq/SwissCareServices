@@ -26,18 +26,18 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="about" className="section-padding bg-background">
+      <div className="max-w-7xl mx-auto content-padding">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           
           {/* Left Column - Content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <div className="space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
               <span className="text-secondary">HelvetiClean</span>, votre partenaire de{" "}
               <span className="text-primary">confiance</span>
             </h2>
             
-            <div className="space-y-6 text-lg text-muted-foreground">
+            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
                 Spécialisée dans les prestations récurrentes de nettoyage des bureaux et locaux professionnels en Suisse Romande, HelvetiClean s'engage à offrir un service d'excellence.
               </p>
@@ -51,13 +51,13 @@ const About = () => {
               </p>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-3 h-3 bg-accent rounded-full"></div>
+            <div className="p-8 bg-muted/30 rounded-2xl border border-muted">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
                 <span className="font-semibold text-lg">Engagement qualité</span>
               </div>
-              <p className="text-muted-foreground">
-                <strong>Devis gratuit sous 24h</strong> - Nous nous engageons à vous fournir une réponse rapide et personnalisée pour tous vos besoins de nettoyage professionnel.
+              <p className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Devis gratuit sous 24h</strong> - Nous nous engageons à vous fournir une réponse rapide et personnalisée pour tous vos besoins de nettoyage professionnel.
               </p>
             </div>
           </div>
@@ -67,12 +67,12 @@ const About = () => {
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <Card key={index} className="shadow-clean hover:shadow-professional transition-professional">
-                  <CardContent className="p-6 text-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mb-4">
+                <Card key={index} className="hover-lift shadow-subtle border-0 bg-card">
+                  <CardContent className="p-8 text-center space-y-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/5 rounded-2xl">
                       <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-bold mb-2">{value.title}</h3>
+                    <h3 className="font-bold text-lg">{value.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {value.description}
                     </p>

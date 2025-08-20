@@ -4,85 +4,85 @@ import { CheckCircle, Sparkles, Clock } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen gradient-fresh flex items-center justify-center relative">
+      <div className="max-w-7xl mx-auto content-padding section-padding relative">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           
           {/* Left Column - Content */}
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center px-4 py-2 bg-card/90 rounded-full shadow-clean mb-8">
-              <Sparkles className="h-4 w-4 text-accent mr-2" />
-              <span className="text-sm font-medium">Service écologique Swiss Made</span>
+          <div className="text-center lg:text-left space-y-8">
+            <div className="inline-flex items-center px-5 py-3 bg-card shadow-subtle rounded-full">
+              <Sparkles className="h-4 w-4 text-accent mr-3" />
+              <span className="text-sm font-medium text-muted-foreground">Service écologique Swiss Made</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
               <span className="text-primary">Propreté</span> en toute{" "}
               <span className="text-secondary">confiance</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
               Service de nettoyage récurrent et écologique pour bureaux, retail de luxe et copropriétés en Suisse Romande.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 shadow-professional text-lg px-8 py-6 rounded-xl"
+                className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-lg px-8 py-6 font-medium"
               >
-                <Clock className="mr-2 h-5 w-5" />
+                <Clock className="mr-3 h-5 w-5" />
                 Obtenez un devis en 24H
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground text-lg px-8 py-6 rounded-xl"
+                className="border-2 border-secondary/20 text-secondary hover:bg-secondary/5 hover:border-secondary/40 text-lg px-8 py-6 transition-gentle font-medium"
               >
                 Nos services
               </Button>
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-8">
+              <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="text-sm font-medium">Écologique</span>
+                <span className="text-sm font-medium text-muted-foreground">Écologique</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="text-sm font-medium">Swiss Made</span>
+                <span className="text-sm font-medium text-muted-foreground">Swiss Made</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <CheckCircle className="h-5 w-5 text-accent" />
-                <span className="text-sm font-medium">Service récurrent</span>
+                <span className="text-sm font-medium text-muted-foreground">Service récurrent</span>
               </div>
             </div>
           </div>
 
           {/* Right Column - Visual Element */}
           <div className="relative">
-            <Card className="p-8 shadow-professional bg-card/95 backdrop-blur-sm">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full mb-6">
-                  <Sparkles className="h-10 w-10 text-white" />
+            <Card className="p-10 shadow-clean bg-card border-0 hover-lift">
+              <div className="text-center space-y-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl">
+                  <Sparkles className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Devis rapide</h3>
-                <p className="text-muted-foreground mb-6">
-                  Obtenez votre devis personnalisé en moins de 24 heures
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-sm">Évaluation gratuite</span>
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-bold">Devis rapide</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Obtenez votre devis personnalisé en moins de 24 heures
+                  </p>
+                </div>
+                <div className="space-y-4 pt-2">
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                    <span className="text-sm text-muted-foreground">Évaluation gratuite</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-sm">Réponse sous 24h</span>
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                    <span className="text-sm text-muted-foreground">Réponse sous 24h</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-sm">Sans engagement</span>
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0"></div>
+                    <span className="text-sm text-muted-foreground">Sans engagement</span>
                   </div>
                 </div>
               </div>

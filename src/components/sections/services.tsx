@@ -29,13 +29,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section id="services" className="section-padding bg-muted/20">
+      <div className="max-w-7xl mx-auto content-padding">
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">
             Nos <span className="text-primary">Services</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Services de nettoyage professionnel adaptés à vos besoins spécifiques en Suisse Romande
           </p>
         </div>
@@ -44,31 +44,35 @@ const Services = () => {
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <Card key={index} className="group hover:shadow-professional transition-professional shadow-clean">
-                <CardHeader className="text-center pb-4">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-gradient-to-br ${
-                    service.color === 'primary' ? 'from-primary to-primary/80' :
-                    service.color === 'secondary' ? 'from-secondary to-secondary/80' :
-                    'from-accent to-accent/80'
+              <Card key={index} className="group hover-lift shadow-subtle border-0 bg-card">
+                <CardHeader className="text-center pb-6 pt-10">
+                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-6 ${
+                    service.color === 'primary' ? 'bg-primary/10' :
+                    service.color === 'secondary' ? 'bg-secondary/10' :
+                    'bg-accent/10'
                   }`}>
-                    <Icon className="h-8 w-8 text-white" />
+                    <Icon className={`h-7 w-7 ${
+                      service.color === 'primary' ? 'text-primary' :
+                      service.color === 'secondary' ? 'text-secondary' :
+                      'text-accent'
+                    }`} />
                   </div>
                   <CardTitle className="text-2xl font-bold">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-8 px-8 pb-10">
                   <p className="text-muted-foreground leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <div className={`w-2 h-2 rounded-full ${
+                      <div key={idx} className="flex items-center gap-4">
+                        <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
                           service.color === 'primary' ? 'bg-primary' :
                           service.color === 'secondary' ? 'bg-secondary' :
                           'bg-accent'
                         }`}></div>
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm text-muted-foreground">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -82,11 +86,7 @@ const Services = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className={`w-full group-hover:${
-                        service.color === 'primary' ? 'bg-primary hover:text-primary-foreground' :
-                        service.color === 'secondary' ? 'bg-secondary hover:text-secondary-foreground' :
-                        'bg-accent hover:text-accent-foreground'
-                      } transition-professional`}
+                      className="w-full border-0 bg-muted/30 hover:bg-muted/60 transition-gentle font-medium py-6"
                     >
                       En savoir plus
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -98,10 +98,10 @@ const Services = () => {
           })}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-20">
           <Button 
             size="lg"
-            className="bg-primary hover:bg-primary/90 shadow-professional px-8 py-6 text-lg rounded-xl"
+            className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle px-10 py-6 text-lg font-medium"
           >
             Demander un devis personnalisé
           </Button>
