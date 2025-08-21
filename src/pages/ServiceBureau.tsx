@@ -113,7 +113,10 @@ const ServiceBureau = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-professional px-8 py-6 text-lg rounded-xl">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 shadow-professional px-8 py-6 text-lg rounded-xl"
+            >
               Demander un devis pour vos bureaux
             </Button>
           </div>

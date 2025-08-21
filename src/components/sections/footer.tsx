@@ -10,13 +10,13 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-2">
             <img 
-              src="/lovable-uploads/8c669d56-d197-43e9-baf2-f83938eee062.png" 
-              alt="HelvetiClean" 
+              src="/lovable-uploads/cebfbee3-13cc-40a6-88e9-11059c5429b5.png" 
+              alt="LEMANCLEAN" 
               className="h-12 sm:h-16 w-auto mb-4"
             />
             <p className="text-muted-foreground mb-4 max-w-md">
               Service de nettoyage professionnel et écologique en Suisse Romande. 
-              Propreté en toute confiance pour bureaux, retail de luxe et copropriétés.
+              Propreté en toute confiance pour bureaux, locaux commerciaux et appartements.
             </p>
             <div className="flex items-center gap-2 text-sm">
               <div className="w-2 h-2 bg-accent rounded-full"></div>
@@ -29,8 +29,8 @@ const Footer = () => {
             <h3 className="font-bold mb-4">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#services" className="hover:text-primary transition-professional">Nettoyage bureaux</a></li>
-              <li><a href="#services" className="hover:text-primary transition-professional">Luxe Retail</a></li>
-              <li><a href="#services" className="hover:text-primary transition-professional">Copropriétés</a></li>
+              <li><a href="#services" className="hover:text-primary transition-professional">Locaux commerciaux</a></li>
+              <li><a href="#services" className="hover:text-primary transition-professional">Appartements</a></li>
               <li><a href="#contact" className="hover:text-primary transition-professional">Devis personnalisé</a></li>
             </ul>
           </div>
@@ -41,11 +41,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span>+41 XX XXX XX XX</span>
+                <span>+41 76 693 09 49</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>contact@helveticlean.ch</span>
+                <span>info@lemanclean.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="border-t pt-6 sm:pt-8 mt-6 sm:mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
-            <p>&copy; 2024 HelvetiClean. Tous droits réservés.</p>
+            <p>&copy; 2024 LEMANCLEAN. Tous droits réservés.</p>
             <div className="space-y-2 w-full sm:w-auto">
               <Collapsible>
                 <CollapsibleTrigger className="flex items-center gap-2 hover:text-primary transition-professional">
@@ -66,11 +66,11 @@ const Footer = () => {
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 text-xs text-muted-foreground">
                   <div className="bg-muted/50 p-3 sm:p-4 rounded-lg max-w-sm sm:max-w-md">
-                    <p className="mb-2"><strong>HelvetiClean</strong></p>
+                    <p className="mb-2"><strong>LEMANCLEAN</strong></p>
                     <p>Service de nettoyage professionnel</p>
                     <p>Suisse Romande</p>
-                    <p className="mt-2">Email: contact@helveticlean.ch</p>
-                    <p>Téléphone: +41 XX XXX XX XX</p>
+                    <p className="mt-2">Email: info@lemanclean.com</p>
+                    <p>Téléphone: +41 76 693 09 49</p>
                   </div>
                 </CollapsibleContent>
               </Collapsible>

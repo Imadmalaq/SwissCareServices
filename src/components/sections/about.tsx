@@ -33,23 +33,15 @@ const About = () => {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
-              <span className="text-secondary">HelvetiClean</span>, votre partenaire de{" "}
+              <span className="text-secondary">LEMANCLEAN</span>, votre partenaire de{" "}
               <span className="text-primary">confiance</span>
             </h2>
             
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-              <p>
-                Spécialisée dans les prestations récurrentes de nettoyage des bureaux et locaux professionnels en Suisse Romande, HelvetiClean s'engage à offrir un service d'excellence.
-              </p>
-              
-              <p>
-                En plus de favoriser la propreté de vos bureaux et l'hygiène de vie de vos salariés, l'entretien de vos locaux est essentiel pour assurer le bien-être au travail et l'image de votre entreprise.
-              </p>
-
-              <p>
-                Nos équipes formées utilisent exclusivement des produits écologiques certifiés pour garantir un environnement sain tout en respectant notre planète.
-              </p>
-            </div>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
+              LEMANCLEAN est votre partenaire de confiance pour des services de nettoyage professionnel en Suisse Romande. 
+              Nous nous engageons à utiliser exclusivement des produits écologiques pour préserver 
+              votre environnement et votre santé.
+            </p>
 
             <div className="p-8 bg-muted/30 rounded-2xl border border-muted">
               <div className="flex items-center gap-4 mb-4">

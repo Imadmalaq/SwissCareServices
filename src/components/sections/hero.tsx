@@ -15,7 +15,7 @@ const Hero = () => {
               <span className="text-sm font-medium text-muted-foreground">Service écologique Swiss Made</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] tracking-tight">
               <span className="text-primary">Propreté</span> en toute{" "}
               <span className="text-secondary">confiance</span>
             </h1>
@@ -24,18 +24,20 @@ const Hero = () => {
               Service de nettoyage récurrent et écologique pour bureaux, retail de luxe et copropriétés en Suisse Romande.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 font-medium"
+                className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 font-medium w-full sm:w-auto"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Clock className="mr-2 sm:mr-3 h-4 sm:h-5 w-4 sm:w-5" />
+                <Clock className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Obtenez un devis en 24H
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-2 border-secondary/20 text-secondary hover:bg-secondary/5 hover:border-secondary/40 text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 transition-gentle font-medium"
+                className="border-2 border-secondary/20 text-secondary hover:bg-secondary/5 hover:border-secondary/40 text-sm sm:text-base lg:text-lg px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 transition-gentle font-medium w-full sm:w-auto"
+                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Nos services
               </Button>

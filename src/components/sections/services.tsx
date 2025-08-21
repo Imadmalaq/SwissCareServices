@@ -7,23 +7,23 @@ const Services = () => {
   const services = [
     {
       icon: Building2,
-      title: "Bureau",
-      description: "Entretien de bureaux d'entreprise. Nous assurons la propreté de vos bureaux et le bien-être de vos salariés avec des services d'entretien haut de gamme.",
-      features: ["Nettoyage quotidien", "Entretien des espaces communs", "Produits écologiques", "Horaires flexibles"],
+      title: "Nettoyage de Bureaux",
+      description: "Chez LEMANCLEAN, nous comprenons l'importance d'un environnement de travail propre et sain. Notre service de nettoyage de bureaux est conçu pour créer un espace propice à la productivité.",
+      features: ["Horaires flexibles", "Équipe qualifiée", "Produits écologiques", "Service personnalisé"],
       color: "primary"
     },
     {
       icon: ShoppingBag,
-      title: "Luxe Retail",
-      description: "Entretien des lieux de prestige. Nous favorisons la propreté de vos surfaces de vente pour refléter le niveau d'excellence de votre entreprise.",
-      features: ["Standards luxury", "Attention aux détails", "Discrétion maximale", "Produits haut de gamme"],
+      title: "Locaux Commerciaux",
+      description: "Pour les entreprises, l'image est primordiale. LEMANCLEAN propose un service de nettoyage de locaux commerciaux qui reflète votre professionnalisme et impressionne vos clients.",
+      features: ["Image professionnelle", "Service personnalisé", "Méthodes durables", "Flexibilité horaire"],
       color: "secondary"
     },
     {
       icon: Home,
-      title: "Copropriété",
-      description: "La propreté des parties communes est primordiale. Cette qualité participe à la valorisation de l'immeuble et au confort des habitants.",
-      features: ["Parties communes", "Cages d'escalier", "Espaces extérieurs", "Entretien régulier"],
+      title: "Appartements",
+      description: "Un appartement propre est essentiel pour un cadre de vie agréable. LEMANCLEAN offre un service personnalisé, adapté à vos besoins et à votre emploi du temps.",
+      features: ["Service sur mesure", "Produits écologiques", "Horaires flexibles", "Personnel de confiance"],
       color: "accent"
     }
   ];
@@ -60,7 +60,7 @@ const Services = () => {
                   <CardTitle className="text-2xl font-bold">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-8 px-8 pb-10">
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed line-clamp-4">
                     {service.description}
                   </p>
                   
@@ -79,9 +79,9 @@ const Services = () => {
 
                   <Link 
                     to={
-                      service.title === 'Bureau' ? '/service-bureau' :
-                      service.title === 'Luxe Retail' ? '/service-retail' :
-                      '/service-copropriete'
+                      service.title === 'Nettoyage de Bureaux' ? '/service-bureau' :
+                      service.title === 'Locaux Commerciaux' ? '/service-commercial' :
+                      '/service-appartement'
                     }
                   >
                     <Button 
@@ -102,6 +102,7 @@ const Services = () => {
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle px-10 py-6 text-lg font-medium"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Demander un devis personnalisé
           </Button>

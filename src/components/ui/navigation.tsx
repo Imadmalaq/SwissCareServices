@@ -11,9 +11,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/8c669d56-d197-43e9-baf2-f83938eee062.png" 
-              alt="HelvetiClean - Propreté en toute confiance" 
-              className="h-8 md:h-12 w-auto transition-smooth hover:scale-105"
+              src="/lovable-uploads/cebfbee3-13cc-40a6-88e9-11059c5429b5.png" 
+              alt="LEMANCLEAN - Propreté en toute confiance" 
+              className="h-12 md:h-16 w-auto transition-smooth hover:scale-105"
             />
           </div>
           
@@ -43,7 +43,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-6">
             <div className="hidden lg:flex items-center space-x-3 text-sm text-muted-foreground">
               <Phone className="h-4 w-4 text-primary" />
-              <span className="font-medium">+41 XX XXX XX XX</span>
+              <span className="font-medium">+41 76 693 09 49</span>
             </div>
             <Button 
               variant="default" 
@@ -103,7 +103,7 @@ const Navigation = () => {
               <div className="pt-4 border-t">
                 <div className="flex items-center space-x-3 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4 text-primary" />
-                  <span className="font-medium">+41 XX XXX XX XX</span>
+                  <span className="font-medium">+41 76 693 09 49</span>
                 </div>
               </div>
             </div>

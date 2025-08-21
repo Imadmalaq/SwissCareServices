@@ -84,8 +84,8 @@ const Contact = () => {
                     <select className="flex h-12 w-full rounded-md border-0 bg-muted/30 px-4 py-2 text-sm focus:bg-background transition-gentle">
                       <option value="">Sélectionnez un service</option>
                       <option value="bureau">Nettoyage de bureaux</option>
-                      <option value="retail">Luxe Retail</option>
-                      <option value="copropriete">Copropriété</option>
+                      <option value="commercial">Locaux commerciaux</option>
+                      <option value="appartement">Appartements</option>
                       <option value="autre">Autre</option>
                     </select>
                   </div>
@@ -121,11 +121,11 @@ const Contact = () => {
                 <div className="space-y-5">
                   <div className="flex items-center gap-4">
                     <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="font-medium">+41 XX XXX XX XX</span>
+                    <span className="font-medium">+41 76 693 09 49</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="font-medium">contact@helveticlean.ch</span>
+                    <span className="font-medium">info@lemanclean.com</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
