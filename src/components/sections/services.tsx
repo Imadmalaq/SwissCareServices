@@ -83,6 +83,7 @@ const Services = () => {
                       service.title === 'Locaux Commerciaux' ? '/service-commercial' :
                       '/service-appartement'
                     }
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     <Button 
                       variant="outline" 
