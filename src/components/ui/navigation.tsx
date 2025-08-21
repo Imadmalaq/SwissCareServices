@@ -49,6 +49,7 @@ const Navigation = () => {
               variant="default" 
               size="sm"
               className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle font-medium px-6"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Devis 24H
             </Button>
@@ -60,6 +61,7 @@ const Navigation = () => {
               variant="default" 
               size="sm"
               className="bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle font-medium px-4 text-sm"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Devis
             </Button>
