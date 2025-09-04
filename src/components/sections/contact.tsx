@@ -1,11 +1,60 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const templateParams = {
+      nom: formData.get('nom'),
+      prenom: formData.get('prenom'),
+      email: formData.get('email'),
+      telephone: formData.get('telephone'),
+      entreprise: formData.get('entreprise'),
+      service: formData.get('service'),
+      message: formData.get('message'),
+    };
+
+    try {
+      // Replace with your EmailJS credentials
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // You need to replace this
+        'YOUR_TEMPLATE_ID', // You need to replace this
+        templateParams,
+        'YOUR_PUBLIC_KEY' // You need to replace this
+      );
+
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous vous répondrons sous 24h à l'adresse email fournie.",
+      });
+
+      // Reset form
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      toast({
+        title: "Erreur d'envoi",
+        description: "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="section-padding bg-muted/20">
       <div className="max-w-7xl mx-auto content-padding">
@@ -27,12 +76,13 @@ const Contact = () => {
                 <CardTitle className="text-2xl font-bold">Demande de devis</CardTitle>
               </CardHeader>
               <CardContent className="px-10 pb-10">
-                <form className="space-y-8">
+                <form className="space-y-8" onSubmit={handleSubmit}>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-3">
                       <Label htmlFor="nom" className="text-sm font-medium">Nom *</Label>
                       <Input 
                         id="nom" 
+                        name="nom"
                         placeholder="Votre nom" 
                         required 
                         className="border-0 bg-muted/30 focus:bg-background transition-gentle h-12"
@@ -42,6 +92,7 @@ const Contact = () => {
                       <Label htmlFor="prenom" className="text-sm font-medium">Prénom *</Label>
                       <Input 
                         id="prenom" 
+                        name="prenom"
                         placeholder="Votre prénom" 
                         required 
                         className="border-0 bg-muted/30 focus:bg-background transition-gentle h-12"
@@ -54,6 +105,7 @@ const Contact = () => {
                       <Label htmlFor="email" className="text-sm font-medium">Email *</Label>
                       <Input 
                         id="email" 
+                        name="email"
                         type="email" 
                         placeholder="votre@email.com" 
                         required 
@@ -64,6 +116,7 @@ const Contact = () => {
                       <Label htmlFor="telephone" className="text-sm font-medium">Téléphone</Label>
                       <Input 
                         id="telephone" 
+                        name="telephone"
                         placeholder="+41 XX XXX XX XX" 
                         className="border-0 bg-muted/30 focus:bg-background transition-gentle h-12"
                       />
@@ -74,6 +127,7 @@ const Contact = () => {
                     <Label htmlFor="entreprise" className="text-sm font-medium">Entreprise / Organisation</Label>
                     <Input 
                       id="entreprise" 
+                      name="entreprise"
                       placeholder="Nom de votre entreprise" 
                       className="border-0 bg-muted/30 focus:bg-background transition-gentle h-12"
                     />
@@ -81,7 +135,7 @@ const Contact = () => {
 
                   <div className="space-y-3">
                     <Label htmlFor="service" className="text-sm font-medium">Type de service</Label>
-                    <select className="flex h-12 w-full rounded-md border-0 bg-muted/30 px-4 py-2 text-sm focus:bg-background transition-gentle">
+                    <select name="service" className="flex h-12 w-full rounded-md border-0 bg-muted/30 px-4 py-2 text-sm focus:bg-background transition-gentle">
                       <option value="">Sélectionnez un service</option>
                       <option value="bureau">Nettoyage de bureaux</option>
                       <option value="commercial">Locaux commerciaux</option>
@@ -94,6 +148,7 @@ const Contact = () => {
                     <Label htmlFor="message" className="text-sm font-medium">Détails de votre demande *</Label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       placeholder="Décrivez vos besoins : surface, fréquence souhaitée, horaires préférés..."
                       className="min-h-[140px] border-0 bg-muted/30 focus:bg-background transition-gentle resize-none"
                       required
@@ -103,10 +158,11 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
+                    disabled={isSubmitting}
                     className="w-full bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-lg py-7 font-medium"
                   >
                     <Clock className="mr-3 h-5 w-5" />
-                    Envoyer ma demande (Réponse sous 24h)
+                    {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande (Réponse sous 24h)"}
                   </Button>
                 </form>
               </CardContent>
@@ -125,7 +181,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="font-medium">info@lemanclean.com</span>
+                    <span className="font-medium">swisscareservice@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
