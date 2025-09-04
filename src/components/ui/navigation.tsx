@@ -8,12 +8,12 @@ const Navigation = () => {
   return (
     <nav className="bg-card/95 backdrop-blur-sm shadow-subtle border-b sticky top-0 z-50">
       <div className="max-w-7xl mx-auto content-padding">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-20 md:h-28">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/cebfbee3-13cc-40a6-88e9-11059c5429b5.png" 
-              alt="LEMANCLEAN - Propreté en toute confiance" 
-              className="h-12 md:h-16 w-auto transition-smooth hover:scale-105"
+              src="/lovable-uploads/c1340238-8eeb-49d4-9ffc-7ea72423402a.png" 
+              alt="SWISSCARESERVICES - Propreté en toute confiance" 
+              className="h-16 md:h-24 w-auto transition-smooth hover:scale-105"
             />
           </div>
           
