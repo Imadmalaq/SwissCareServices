@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="sm:col-span-2 lg:col-span-2">
             <img 
-              src="/lovable-uploads/cebfbee3-13cc-40a6-88e9-11059c5429b5.png" 
-              alt="LEMANCLEAN" 
+              src="/lovable-uploads/4b873ff4-56a5-4610-b990-0b14d86bb9d9.png" 
+              alt="SWISSCARESERVICES" 
               className="h-12 sm:h-16 w-auto mb-4"
             />
             <p className="text-muted-foreground mb-4 max-w-md">
