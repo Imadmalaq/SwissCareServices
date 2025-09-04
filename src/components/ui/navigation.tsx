@@ -11,7 +11,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20 md:h-28">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/c1340238-8eeb-49d4-9ffc-7ea72423402a.png" 
+              src="/lovable-uploads/4b873ff4-56a5-4610-b990-0b14d86bb9d9.png" 
               alt="SWISSCARESERVICES - Propreté en toute confiance" 
               className="h-16 md:h-24 w-auto transition-smooth hover:scale-105"
             />
