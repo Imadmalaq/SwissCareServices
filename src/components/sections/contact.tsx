@@ -159,10 +159,14 @@ const Contact = () => {
                     type="submit" 
                     size="lg" 
                     disabled={status === 'sending'}
-                    className="w-full bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-base sm:text-lg py-5 sm:py-6 font-medium whitespace-normal sm:whitespace-nowrap text-center break-words leading-snug items-start sm:items-center"
+                    className="w-full bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-base sm:text-lg py-5 sm:py-6 font-medium"
                   >
-                    <Clock className="mr-3 h-5 w-5" />
-                    {status === 'sending' ? "Envoi..." : "Envoyer ma demande (Réponse sous 24h)"}
+                    <span className="flex items-center justify-center gap-3">
+                      <Clock className="h-5 w-5" />
+                      <span className="whitespace-normal sm:whitespace-nowrap leading-snug text-center">
+                        {status === 'sending' ? "Envoi..." : "Envoyer ma demande (Réponse sous 24h)"}
+                      </span>
+                    </span>
                   </Button>
                 </form>
               </CardContent>
