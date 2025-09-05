@@ -40,7 +40,7 @@ const WhyUs = () => {
       <div className="max-w-7xl mx-auto content-padding">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Pourquoi choisir <span className="text-primary">LEMANCLEAN</span> ?
+            Pourquoi choisir <span className="text-primary">SwissCareServices</span> ?
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Notre expertise et notre engagement font la différence pour un service de nettoyage d'exception

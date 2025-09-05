@@ -8,21 +8,21 @@ const Services = () => {
     {
       icon: Building2,
       title: "Nettoyage de Bureaux",
-      description: "Chez LEMANCLEAN, nous comprenons l'importance d'un environnement de travail propre et sain. Notre service de nettoyage de bureaux est conçu pour créer un espace propice à la productivité.",
+      description: "Chez SwissCareServices, nous comprenons l'importance d'un environnement de travail propre et sain. Notre service de nettoyage de bureaux est conçu pour créer un espace propice à la productivité.",
       features: ["Horaires flexibles", "Équipe qualifiée", "Produits écologiques", "Service personnalisé"],
       color: "primary"
     },
     {
       icon: ShoppingBag,
       title: "Locaux Commerciaux",
-      description: "Pour les entreprises, l'image est primordiale. LEMANCLEAN propose un service de nettoyage de locaux commerciaux qui reflète votre professionnalisme et impressionne vos clients.",
+      description: "Pour les entreprises, l'image est primordiale. SwissCareServices propose un service de nettoyage de locaux commerciaux qui reflète votre professionnalisme et impressionne vos clients.",
       features: ["Image professionnelle", "Service personnalisé", "Méthodes durables", "Flexibilité horaire"],
       color: "secondary"
     },
     {
       icon: Home,
       title: "Appartements",
-      description: "Un appartement propre est essentiel pour un cadre de vie agréable. LEMANCLEAN offre un service personnalisé, adapté à vos besoins et à votre emploi du temps.",
+      description: "Un appartement propre est essentiel pour un cadre de vie agréable. SwissCareServices offre un service personnalisé, adapté à vos besoins et à votre emploi du temps.",
       features: ["Service sur mesure", "Produits écologiques", "Horaires flexibles", "Personnel de confiance"],
       color: "accent"
     }

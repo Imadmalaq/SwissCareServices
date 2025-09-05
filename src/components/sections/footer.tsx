@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>info@lemanclean.com</span>
+                <span>swisscareservice@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="border-t pt-6 sm:pt-8 mt-6 sm:mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 text-sm text-muted-foreground">
-            <p>&copy; 2024 LEMANCLEAN. Tous droits réservés.</p>
+            <p>&copy; 2024 SwissCareServices. Tous droits réservés.</p>
             <div className="space-y-2 w-full sm:w-auto">
               <Collapsible>
                 <CollapsibleTrigger className="flex items-center gap-2 hover:text-primary transition-professional">
@@ -66,10 +66,10 @@ const Footer = () => {
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 text-xs text-muted-foreground">
                   <div className="bg-muted/50 p-3 sm:p-4 rounded-lg max-w-sm sm:max-w-md">
-                    <p className="mb-2"><strong>LEMANCLEAN</strong></p>
+                    <p className="mb-2"><strong>SwissCareServices</strong></p>
                     <p>Service de nettoyage professionnel</p>
                     <p>Suisse Romande</p>
-                    <p className="mt-2">Email: info@lemanclean.com</p>
+                    <p className="mt-2">Email: swisscareservice@gmail.com</p>
                     <p>Téléphone: +41 76 693 09 49</p>
                   </div>
                 </CollapsibleContent>

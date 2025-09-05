@@ -33,12 +33,12 @@ const About = () => {
           {/* Left Column - Content */}
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
-              <span className="text-secondary">LEMANCLEAN</span>, votre partenaire de{" "}
+              <span className="text-secondary">SwissCareServices</span>, votre partenaire de{" "}
               <span className="text-primary">confiance</span>
             </h2>
             
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8">
-              LEMANCLEAN est votre partenaire de confiance pour des services de nettoyage professionnel en Suisse Romande. 
+              SwissCareServices est votre partenaire de confiance pour des services de nettoyage professionnel en Suisse Romande. 
               Nous nous engageons à utiliser exclusivement des produits écologiques pour préserver 
               votre environnement et votre santé.
             </p>
