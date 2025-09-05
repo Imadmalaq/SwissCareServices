@@ -28,12 +28,11 @@ const Contact = () => {
     };
 
     try {
-      // Replace with your EmailJS credentials
       await emailjs.send(
-        'YOUR_SERVICE_ID', // You need to replace this
-        'YOUR_TEMPLATE_ID', // You need to replace this
+        'service_yjs8dja',
+        'template_hnpu4z9',
         templateParams,
-        'YOUR_PUBLIC_KEY' // You need to replace this
+        '-fjE764uda2R3RIAA'
       );
 
       toast({
@@ -185,7 +184,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="font-medium">Suisse Romande</span>
+                    <span className="font-medium">Chemin du grand pré 58</span>
                   </div>
                 </div>
               </CardContent>
