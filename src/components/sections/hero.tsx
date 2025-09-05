@@ -21,7 +21,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Service de nettoyage récurrent et écologique pour bureaux, Locaux Commerciaux et Appartements en Suisse Romande.
+              Service de nettoyage récurrent et écologique pour bureaux, locaux commerciaux et appartements en Suisse Romande.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-4">
