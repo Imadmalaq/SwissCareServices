@@ -24,41 +24,32 @@ const Contact = () => {
       telephone: formData.get('telephone'),
       entreprise: formData.get('entreprise'),
       service: formData.get('service'),
-      message: formData.get('message'),
+      details: formData.get('details'),
     };
 
-    try {
-      const result = await emailjs.send(
-        'service_yjs8dja',
-        'template_hnpu4z9',
-        templateParams,
-        '-fjE764uda2R3RIAA'
-      );
-      
+    emailjs.send(
+      'service_yjs8dja',
+      'template_hnpu4z9',
+      templateParams,
+      '-fjE764uda2R3RIAA'
+    ).then((result) => {
       console.log('EmailJS success:', result);
-      
-      // Check if the result indicates success
-      if (result.status === 200 || result.text === 'OK') {
-        toast({
-          title: "✅ Merci, nous vous recontacterons sous 24h.",
-          description: "Votre demande de devis a été envoyée avec succès.",
-        });
-
-        // Reset form
-        e.currentTarget.reset();
-      } else {
-        throw new Error(`EmailJS returned status: ${result.status}`);
-      }
-    } catch (error) {
+      toast({
+        title: "✅ Merci, nous vous recontacterons sous 24h.",
+        description: "Votre demande de devis a été envoyée avec succès.",
+      });
+      // Reset form
+      e.currentTarget.reset();
+    }).catch((error) => {
       console.error('EmailJS error:', error);
       toast({
         title: "❌ Oups, un problème est survenu. Veuillez réessayer.",
         description: "Si le problème persiste, contactez-nous directement au +41 76 693 09 49",
         variant: "destructive",
       });
-    } finally {
+    }).finally(() => {
       setIsSubmitting(false);
-    }
+    });
   };
 
   return (
@@ -142,19 +133,19 @@ const Contact = () => {
                   <div className="space-y-3">
                     <Label htmlFor="service" className="text-sm font-medium">Type de service</Label>
                     <select name="service" className="flex h-12 w-full rounded-md border-0 bg-muted/30 px-4 py-2 text-sm focus:bg-background transition-gentle">
-                      <option value="">Sélectionnez un service</option>
-                      <option value="bureau">Nettoyage de bureaux</option>
-                      <option value="commercial">Locaux commerciaux</option>
-                      <option value="appartement">Appartements</option>
+                      <option value="" disabled>Sélectionnez un service</option>
+                      <option value="nettoyage-bureaux">Nettoyage de bureaux</option>
+                      <option value="locaux-commerciaux">Locaux commerciaux</option>
+                      <option value="appartements">Appartements</option>
                       <option value="autre">Autre</option>
                     </select>
                   </div>
 
                   <div className="space-y-3">
-                    <Label htmlFor="message" className="text-sm font-medium">Détails de votre demande *</Label>
+                    <Label htmlFor="details" className="text-sm font-medium">Détails de votre demande *</Label>
                     <Textarea 
-                      id="message" 
-                      name="message"
+                      id="details" 
+                      name="details"
                       placeholder="Décrivez vos besoins : surface, fréquence souhaitée, horaires préférés..."
                       className="min-h-[140px] border-0 bg-muted/30 focus:bg-background transition-gentle resize-none"
                       required
