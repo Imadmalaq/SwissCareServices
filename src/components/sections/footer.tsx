@@ -45,7 +45,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>swisscareservice@gmail.com</span>
+                <span>info@swisscareservices.ch</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="h-4 w-4" />
@@ -69,7 +69,7 @@ const Footer = () => {
                     <p className="mb-2"><strong>SwissCareServices</strong></p>
                     <p>Service de nettoyage professionnel</p>
                     <p>Suisse Romande</p>
-                    <p className="mt-2">Email: swisscareservice@gmail.com</p>
+                    <p className="mt-2">Email: info@swisscareservices.ch</p>
                     <p>Téléphone: +41 76 693 09 49</p>
                   </div>
                 </CollapsibleContent>

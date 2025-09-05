@@ -185,7 +185,7 @@ const Contact = () => {
                   </div>
                   <div className="flex items-center gap-4">
                     <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span className="font-medium">swisscareservice@gmail.com</span>
+                    <span className="font-medium">info@swisscareservices.ch</span>
                   </div>
                   <div className="flex items-center gap-4">
                     <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
