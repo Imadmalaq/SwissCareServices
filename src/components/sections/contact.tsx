@@ -72,12 +72,12 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2 order-2 lg:order-1">
             <Card className="shadow-clean border-0 bg-card">
-              <CardHeader className="pb-8 pt-10">
-                <CardTitle className="text-2xl font-bold">Demande de devis</CardTitle>
+              <CardHeader className="pb-6 sm:pb-8 pt-6 sm:pt-10 px-4 sm:px-6 lg:px-10">
+                <CardTitle className="text-xl sm:text-2xl font-bold">Demande de devis</CardTitle>
               </CardHeader>
-              <CardContent className="px-10 pb-10">
-                <form className="space-y-8" onSubmit={handleSubmit}>
-                  <div className="grid md:grid-cols-2 gap-6">
+              <CardContent className="px-4 sm:px-6 lg:px-10 pb-6 sm:pb-10">
+                <form className="space-y-6 sm:space-y-8" onSubmit={handleSubmit}>
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-3">
                       <Label htmlFor="nom" className="text-sm font-medium">Nom *</Label>
                       <Input 
@@ -100,7 +100,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-3">
                       <Label htmlFor="email" className="text-sm font-medium">Email *</Label>
                       <Input 
@@ -170,9 +170,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 lg:space-y-8 order-1 lg:order-2">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2">
             <Card className="shadow-subtle border-0 bg-card">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="font-bold text-lg mb-6">Contact direct</h3>
                 <div className="space-y-5">
                   <div className="flex items-center gap-4">
@@ -192,7 +192,7 @@ const Contact = () => {
             </Card>
 
             <Card className="shadow-subtle border-0 bg-card">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-6 lg:p-8">
                 <h3 className="font-bold text-lg mb-6">Horaires</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
@@ -212,7 +212,7 @@ const Contact = () => {
             </Card>
 
             <Card className="bg-muted/30 border-0 shadow-subtle">
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-4 sm:p-6 lg:p-8 text-center">
                 <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-3">Devis rapide</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">

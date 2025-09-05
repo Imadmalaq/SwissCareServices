@@ -62,7 +62,7 @@ const Hero = () => {
 
           {/* Right Column - Visual Element */}
           <div className="relative">
-            <Card className="p-10 shadow-clean bg-card border-0 hover-lift">
+            <Card className="p-4 sm:p-6 lg:p-10 shadow-clean bg-card border-0 hover-lift">
               <div className="text-center space-y-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl">
                   <Sparkles className="h-8 w-8 text-primary" />
