@@ -159,10 +159,10 @@ const Contact = () => {
                     type="submit" 
                     size="lg" 
                     disabled={status === 'sending'}
-                    className="w-full bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-lg py-7 font-medium"
+                    className="w-full bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-base sm:text-lg py-5 sm:py-6 font-medium whitespace-normal sm:whitespace-nowrap text-center break-words leading-snug items-start sm:items-center"
                   >
                     <Clock className="mr-3 h-5 w-5" />
-                    {status === 'sending' ? "Sending..." : "Envoyer ma demande (Réponse sous 24h)"}
+                    {status === 'sending' ? "Envoi..." : "Envoyer ma demande (Réponse sous 24h)"}
                   </Button>
                 </form>
               </CardContent>
