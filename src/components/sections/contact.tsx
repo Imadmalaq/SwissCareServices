@@ -14,9 +14,10 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget; // capture form before async work (avoid pooled event issues)
     setStatus('sending');
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     const templateParams = {
       nom: formData.get('nom'),
       prenom: formData.get('prenom'),
@@ -39,8 +40,8 @@ const Contact = () => {
         title: "✅ Thank you, we will get back to you within 24h.",
         description: "Your quote request has been sent successfully.",
       });
-      // Reset form
-      e.currentTarget.reset();
+      // Reset form safely (do not use the pooled React event)
+      form.reset();
     }).catch((error) => {
       console.error('EmailJS error:', error);
       setStatus('error');
