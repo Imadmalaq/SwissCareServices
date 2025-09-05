@@ -28,25 +28,32 @@ const Contact = () => {
     };
 
     try {
-      await emailjs.send(
+      const result = await emailjs.send(
         'service_yjs8dja',
         'template_hnpu4z9',
         templateParams,
         '-fjE764uda2R3RIAA'
       );
+      
+      console.log('EmailJS success:', result);
+      
+      // Check if the result indicates success
+      if (result.status === 200 || result.text === 'OK') {
+        toast({
+          title: "✅ Merci, nous vous recontacterons sous 24h.",
+          description: "Votre demande de devis a été envoyée avec succès.",
+        });
 
-      toast({
-        title: "Demande envoyée !",
-        description: "Nous vous répondrons sous 24h à l'adresse email fournie.",
-      });
-
-      // Reset form
-      e.currentTarget.reset();
+        // Reset form
+        e.currentTarget.reset();
+      } else {
+        throw new Error(`EmailJS returned status: ${result.status}`);
+      }
     } catch (error) {
       console.error('EmailJS error:', error);
       toast({
-        title: "Erreur d'envoi",
-        description: "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+        title: "❌ Oups, un problème est survenu. Veuillez réessayer.",
+        description: "Si le problème persiste, contactez-nous directement au +41 76 693 09 49",
         variant: "destructive",
       });
     } finally {
