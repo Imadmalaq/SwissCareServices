@@ -10,11 +10,11 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setStatus('sending');
 
     const formData = new FormData(e.currentTarget);
     const templateParams = {
@@ -34,21 +34,23 @@ const Contact = () => {
       '-fjE764uda2R3RIAA'
     ).then((result) => {
       console.log('EmailJS success:', result);
+      setStatus('sent');
       toast({
-        title: "✅ Merci, nous vous recontacterons sous 24h.",
-        description: "Votre demande de devis a été envoyée avec succès.",
+        title: "✅ Thank you, we will get back to you within 24h.",
+        description: "Your quote request has been sent successfully.",
       });
       // Reset form
       e.currentTarget.reset();
     }).catch((error) => {
       console.error('EmailJS error:', error);
+      setStatus('error');
       toast({
-        title: "❌ Oups, un problème est survenu. Veuillez réessayer.",
-        description: "Si le problème persiste, contactez-nous directement au +41 76 693 09 49",
+        title: "❌ Oops, something went wrong. Please try again.",
         variant: "destructive",
       });
     }).finally(() => {
-      setIsSubmitting(false);
+      // Keep status 'sent' or 'error'; fallback to 'idle' if still 'sending'
+      setStatus((prev) => (prev === 'sending' ? 'idle' : prev));
     });
   };
 
@@ -132,8 +134,8 @@ const Contact = () => {
 
                   <div className="space-y-3">
                     <Label htmlFor="service" className="text-sm font-medium">Type de service</Label>
-                    <select name="service" className="flex h-12 w-full rounded-md border-0 bg-muted/30 px-4 py-2 text-sm focus:bg-background transition-gentle">
-                      <option value="" disabled>Sélectionnez un service</option>
+                    <select name="service" defaultValue="" className="flex h-12 w-full rounded-md border-0 bg-muted/30 px-4 py-2 text-sm focus:bg-background transition-gentle">
+                      <option value="" disabled hidden>Sélectionnez un service</option>
                       <option value="nettoyage-bureaux">Nettoyage de bureaux</option>
                       <option value="locaux-commerciaux">Locaux commerciaux</option>
                       <option value="appartements">Appartements</option>
@@ -155,11 +157,11 @@ const Contact = () => {
                   <Button 
                     type="submit" 
                     size="lg" 
-                    disabled={isSubmitting}
+                    disabled={status === 'sending'}
                     className="w-full bg-primary hover:bg-primary/90 shadow-subtle hover:shadow-clean transition-gentle text-lg py-7 font-medium"
                   >
                     <Clock className="mr-3 h-5 w-5" />
-                    {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande (Réponse sous 24h)"}
+                    {status === 'sending' ? "Sending..." : "Envoyer ma demande (Réponse sous 24h)"}
                   </Button>
                 </form>
               </CardContent>
