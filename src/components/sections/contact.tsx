@@ -124,7 +124,9 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-3">
-                    <Label htmlFor="entreprise" className="text-sm font-medium">Entreprise / Organisation</Label>
+                     <Label htmlFor="entreprise" className="text-sm font-medium">
+                       Entreprise / Organisation <span className="text-xs text-muted-foreground font-normal">(facultatif)</span>
+                     </Label>
                     <Input 
                       id="entreprise" 
                       name="entreprise"
